@@ -1,0 +1,56 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: mtp-backend-ms-transaction
+  liquibase:
+    enabled: ${LIQUIBASE_ENABLED:true}
+    change-log: db/dev/changelog.yml
+    clear-checksums: true
+    default-schema: ${DB_SCHEME_NAME:mtp_transes}
+    liquibase-schema: ${DB_SCHEME_NAME:mtp_transes}
+    parameters: {
+      default-schema: "${spring.liquibase.default-schema}",
+      schema: "${spring.liquibase.liquibase-schema}"
+    }
+  jpa:
+    properties:
+      hibernate:
+        default_schema: ${DB_SCHEME_NAME:mtp_transes}
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+    database: postgresql
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_URL:core.netbird.selfhosted}:${POSTGRES_PORT:5432}/${POSTGRES_DB_NAME:mtp_dev}
+    username: ${POSTGRES_USER:postgres}
+    password: ${POSTGRES_PASSWORD:masterpass}
+    driver-class-name: org.postgresql.Driver
+  cloud:
+    openfeign:
+      circuitbreaker:
+        enabled: true
+
+logging:
+  charset:
+    console: UTF-8
+    file: UTF-8
+  level:
+    b4e.ru.mtp.backend: ${LOGGING_LEVEL:debug}
+
+ms:
+  feign-clients:
+    categories-client:
+      url: ${MS_CATEGORIES_BASE_URL:http://localhost:8081}
+      connect-timeout: 3000
+      read-timeout: 6000
+      logger-level: FULL
+    accounts-client:
+      url: ${MS_ACCOUNTS_BASE_URL:http://localhost:8082}
+      connect-timeout: 3000
+      read-timeout: 6000
+      logger-level: FULL
+  order-executor:
+    max-retry-counts: 3
+    retry-delay-ms: 1000

@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2026-08-31-create-table-order
+      author: dtuev
+      changes:
+        - createTable:
+            tableName: order
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: source
+                  type: UUID
+              - column:
+                  name: target
+                  type: UUID
+              - column:
+                  name: amount
+                  type: bigint
+              - column:
+                  name: status
+                  type: varchar(20)

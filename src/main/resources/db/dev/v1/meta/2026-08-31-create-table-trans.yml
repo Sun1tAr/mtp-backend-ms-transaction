@@ -1,0 +1,45 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2026-08-31-create-table-trans
+      author: dtuev
+      changes:
+        - createTable:
+            tableName: trans
+            columns:
+              - column:
+                  name: id
+                  type: UUID
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: description
+                  type: varchar
+              - column:
+                  name: owner_id
+                  type: bigint
+              - column:
+                  name: source
+                  type: UUID
+              - column:
+                  name: target
+                  type: UUID
+              - column:
+                  name: amount
+                  type: bigint
+              - column:
+                  name: created_at
+                  type: date
+              - column:
+                  name: status
+                  type: varchar(20)
+              - column:
+                  name: type
+                  type: varchar(20)
+              - column:
+                  name: order_id
+                  type: UUID
+                  constraints:
+                    foreignKeyName: fk_order_id
+                    referencedTableName: order
+                    referencedColumnNames: id

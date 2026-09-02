@@ -1,0 +1,7 @@
+databaseChangeLog:
+  -  include:
+       file: "2026-08-31-create-table-order.yml"
+       relativeToChangelogFile: true
+  -  include:
+       file: "2026-08-31-create-table-trans.yml"
+       relativeToChangelogFile: true

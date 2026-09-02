@@ -1,0 +1,12 @@
+###
+POST http://localhost:8080/transactions
+Content-Type: application/json
+X-User-ID: 22
+
+{
+  "description": "Распределение",
+  "type": "TRANSFER",
+  "amount": 30,
+  "target": "b4d54291-ac2b-44bb-bfea-bb531de08668",
+  "source": "be290141-8062-4aa0-820f-9a6a334df227"
+}
