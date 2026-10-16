@@ -140,8 +140,7 @@ public class TransactionServiceImpl implements TransactionService {
                 Arrays.stream(TransactionTypeCode.values())
                         .map(t -> new TransactionType(t.getTitle(), t))
                         .toList();
-        GetTransactionTypesResponse response = new GetTransactionTypesResponse(list);
-        return response;
+        return new GetTransactionTypesResponse(list);
     }
 
     private List<Transaction> mapToDomain(
