@@ -1,8 +1,8 @@
 package b4e.ru.mtp.backend.ms.transaction.client.fallback;
 
-import b4e.ru.mtp.backend.commons.dto.acc.ExecuteOrderRequest;
-import b4e.ru.mtp.backend.commons.dto.common.GetMoneyResourceRequest;
-import b4e.ru.mtp.backend.commons.dto.common.GetMoneyResourcesResponse;
+import b4e.ru.mtp.backend.ms.transaction.api.dto.ExecuteOrderRequest;
+import b4e.ru.mtp.backend.ms.transaction.api.dto.GetMoneyResourceRequest;
+import b4e.ru.mtp.backend.ms.transaction.api.dto.GetMoneyResourcesResponse;
 import b4e.ru.mtp.backend.ms.transaction.client.AccountsClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;

@@ -1,10 +1,9 @@
 package b4e.ru.mtp.backend.ms.transaction.client;
 
-import b4e.ru.mtp.backend.commons.api.MtpHttpHeaders;
-import b4e.ru.mtp.backend.commons.dto.acc.ExecuteOrderRequest;
-import b4e.ru.mtp.backend.commons.dto.acc.GetOrderStatusResponse;
-import b4e.ru.mtp.backend.commons.dto.common.GetMoneyResourceRequest;
-import b4e.ru.mtp.backend.commons.dto.common.GetMoneyResourcesResponse;
+import b4e.ru.mtp.backend.ms.transaction.api.MtpHttpHeaders;
+import b4e.ru.mtp.backend.ms.transaction.api.dto.ExecuteOrderRequest;
+import b4e.ru.mtp.backend.ms.transaction.api.dto.GetMoneyResourceRequest;
+import b4e.ru.mtp.backend.ms.transaction.api.dto.GetMoneyResourcesResponse;
 import b4e.ru.mtp.backend.ms.transaction.client.config.AccountsClientConfig;
 import b4e.ru.mtp.backend.ms.transaction.client.fallback.AccountsFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;

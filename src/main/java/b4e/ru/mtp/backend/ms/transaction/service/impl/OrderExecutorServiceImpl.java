@@ -1,10 +1,10 @@
 package b4e.ru.mtp.backend.ms.transaction.service.impl;
 
-import b4e.ru.mtp.backend.commons.dto.domain.Order;
-import b4e.ru.mtp.backend.commons.dto.domain.OrderStatusCode;
-import b4e.ru.mtp.backend.commons.exception.MtpErrorCode;
-import b4e.ru.mtp.backend.commons.exception.MtpException;
+import b4e.ru.mtp.backend.ms.transaction.domain.Order;
+import b4e.ru.mtp.backend.ms.transaction.domain.OrderStatusCode;
 import b4e.ru.mtp.backend.ms.transaction.entity.OrderEntity;
+import b4e.ru.mtp.backend.ms.transaction.exception.MtpErrorCode;
+import b4e.ru.mtp.backend.ms.transaction.exception.MtpException;
 import b4e.ru.mtp.backend.ms.transaction.mapper.OrderMapper;
 import b4e.ru.mtp.backend.ms.transaction.service.IntegrationService;
 import b4e.ru.mtp.backend.ms.transaction.service.OrderExecutorService;

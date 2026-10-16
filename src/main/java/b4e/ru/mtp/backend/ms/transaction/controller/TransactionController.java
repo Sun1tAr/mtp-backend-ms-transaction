@@ -1,6 +1,6 @@
 package b4e.ru.mtp.backend.ms.transaction.controller;
 
-import b4e.ru.mtp.backend.commons.dto.transaction.CreateTransactionRequest;
+import b4e.ru.mtp.backend.ms.transaction.api.dto.CreateTransactionRequest;
 import b4e.ru.mtp.backend.ms.transaction.service.TransactionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

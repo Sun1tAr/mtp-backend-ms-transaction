@@ -1,19 +1,19 @@
 package b4e.ru.mtp.backend.ms.transaction.service.impl;
 
-import b4e.ru.mtp.backend.commons.api.MtpHttpHeaders;
-import b4e.ru.mtp.backend.commons.dto.acc.ExecuteOrderRequest;
-import b4e.ru.mtp.backend.commons.dto.acc.GetOrderStatusResponse;
-import b4e.ru.mtp.backend.commons.dto.common.GetMoneyResourceRequest;
-import b4e.ru.mtp.backend.commons.dto.common.GetMoneyResourcesResponse;
-import b4e.ru.mtp.backend.commons.dto.domain.MoneyResource;
-import b4e.ru.mtp.backend.commons.dto.domain.Order;
-import b4e.ru.mtp.backend.commons.dto.domain.OrderStatusCode;
-import b4e.ru.mtp.backend.commons.exception.MtpErrorCode;
-import b4e.ru.mtp.backend.commons.exception.MtpException;
-import b4e.ru.mtp.backend.commons.service.RequestContextService;
+import b4e.ru.mtp.backend.ms.transaction.api.MtpHttpHeaders;
+import b4e.ru.mtp.backend.ms.transaction.api.dto.ExecuteOrderRequest;
+import b4e.ru.mtp.backend.ms.transaction.api.dto.GetMoneyResourceRequest;
+import b4e.ru.mtp.backend.ms.transaction.api.dto.GetMoneyResourcesResponse;
+import b4e.ru.mtp.backend.ms.transaction.api.dto.GetOrderStatusResponse;
 import b4e.ru.mtp.backend.ms.transaction.client.AccountsClient;
 import b4e.ru.mtp.backend.ms.transaction.client.CategoriesClient;
+import b4e.ru.mtp.backend.ms.transaction.domain.MoneyResource;
+import b4e.ru.mtp.backend.ms.transaction.domain.Order;
+import b4e.ru.mtp.backend.ms.transaction.domain.OrderStatusCode;
+import b4e.ru.mtp.backend.ms.transaction.exception.MtpErrorCode;
+import b4e.ru.mtp.backend.ms.transaction.exception.MtpException;
 import b4e.ru.mtp.backend.ms.transaction.service.IntegrationService;
+import b4e.ru.mtp.backend.ms.transaction.service.RequestContextService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -75,8 +75,8 @@ public class IntegrationServiceImpl implements IntegrationService {
         if (responseIsValid(catResourcesRaw) &&
                 responseIsValid(accResourcesRaw)
         ) {
-            GetMoneyResourcesResponse cats = (GetMoneyResourcesResponse) catResourcesRaw.getBody();
-            GetMoneyResourcesResponse accs = (GetMoneyResourcesResponse) accResourcesRaw.getBody();
+            GetMoneyResourcesResponse cats = catResourcesRaw.getBody();
+            GetMoneyResourcesResponse accs = accResourcesRaw.getBody();
             List<MoneyResource> resources = cats.getResources();
             resources.addAll(accs.getResources());
             return resources;

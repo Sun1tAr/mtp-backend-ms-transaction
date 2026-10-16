@@ -1,8 +1,9 @@
 package b4e.ru.mtp.backend.ms.transaction.service;
 
-import b4e.ru.mtp.backend.commons.dto.transaction.CreateTransactionRequest;
-import b4e.ru.mtp.backend.commons.dto.transaction.GetTransactionTypesResponse;
-import b4e.ru.mtp.backend.commons.dto.transaction.GetTransactionsResponse;
+
+import b4e.ru.mtp.backend.ms.transaction.api.dto.CreateTransactionRequest;
+import b4e.ru.mtp.backend.ms.transaction.api.dto.GetTransactionTypesResponse;
+import b4e.ru.mtp.backend.ms.transaction.api.dto.GetTransactionsResponse;
 
 public interface TransactionService {
 

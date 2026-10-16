@@ -1,6 +1,5 @@
 package b4e.ru.mtp.backend.ms.transaction.config;
 
-import b4e.ru.mtp.backend.commons.config.FilterConfig;
 import b4e.ru.mtp.backend.ms.transaction.client.AccountsClient;
 import b4e.ru.mtp.backend.ms.transaction.client.CategoriesClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
