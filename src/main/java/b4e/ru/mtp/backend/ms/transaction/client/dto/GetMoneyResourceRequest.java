@@ -1,4 +1,4 @@
-package b4e.ru.mtp.backend.ms.transaction.api.dto;
+package b4e.ru.mtp.backend.ms.transaction.client.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,12 +1,12 @@
 package b4e.ru.mtp.backend.ms.transaction.service.impl;
 
 import b4e.ru.mtp.backend.ms.transaction.api.MtpHttpHeaders;
-import b4e.ru.mtp.backend.ms.transaction.api.dto.ExecuteOrderRequest;
-import b4e.ru.mtp.backend.ms.transaction.api.dto.GetMoneyResourceRequest;
-import b4e.ru.mtp.backend.ms.transaction.api.dto.GetMoneyResourcesResponse;
-import b4e.ru.mtp.backend.ms.transaction.api.dto.GetOrderStatusResponse;
 import b4e.ru.mtp.backend.ms.transaction.client.AccountsClient;
 import b4e.ru.mtp.backend.ms.transaction.client.CategoriesClient;
+import b4e.ru.mtp.backend.ms.transaction.client.dto.ExecuteOrderRequest;
+import b4e.ru.mtp.backend.ms.transaction.client.dto.GetMoneyResourceRequest;
+import b4e.ru.mtp.backend.ms.transaction.client.dto.GetMoneyResourcesResponse;
+import b4e.ru.mtp.backend.ms.transaction.client.dto.GetOrderStatusResponse;
 import b4e.ru.mtp.backend.ms.transaction.domain.MoneyResource;
 import b4e.ru.mtp.backend.ms.transaction.domain.Order;
 import b4e.ru.mtp.backend.ms.transaction.domain.OrderStatusCode;
